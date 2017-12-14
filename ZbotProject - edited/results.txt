@@ -1,0 +1,546 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+
+  libavutil      54. 31.100 / 54. 31.100
+
+  libavcodec     56. 60.100 / 56. 60.100
+
+  libavformat    56. 40.101 / 56. 40.101
+
+  libavdevice    56.  4.100 / 56.  4.100
+
+  libavfilter     5. 40.101 /  5. 40.101
+
+  libavresample   2.  1.  0 /  2.  1.  0
+
+  libswscale      3.  1.101 /  3.  1.101
+
+  libswresample   1.  2.101 /  1.  2.101
+
+  libpostproc    53.  3.100 / 53.  3.100
+
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf56.40.101
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc56.60.100 pcm_s16le
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+[silencedetect @ 0x813880] silence_start: 0.012
+
+[silencedetect @ 0x813880] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0x813880] silence_start: 2.06
+
+[silencedetect @ 0x813880] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0x813880] silence_start: 5.644
+
+[silencedetect @ 0x813880] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0x813880] silence_start: 9.228
+
+[silencedetect @ 0x813880] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0x813880] silence_start: 20.236
+
+[silencedetect @ 0x813880] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0x813880] silence_start: 28.172
+
+[silencedetect @ 0x813880] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0x813880] silence_start: 30.988
+
+[silencedetect @ 0x813880] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0x813880] silence_start: 31.756
+
+[silencedetect @ 0x813880] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0x813880] silence_start: 32.524
+
+[silencedetect @ 0x813880] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0x813880] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version 3.3.5 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 7 (GCC)
+
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld ' --extra-cflags='-I/usr/include/nvenc ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-frei0r --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-avfilter --enable-avresample --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+
+  libavutil      55. 58.100 / 55. 58.100
+
+  libavcodec     57. 89.100 / 57. 89.100
+
+  libavformat    57. 71.100 / 57. 71.100
+
+  libavdevice    57.  6.100 / 57.  6.100
+
+  libavfilter     6. 82.100 /  6. 82.100
+
+  libavresample   3.  5.  0 /  3.  5.  0
+
+  libswscale      4.  6.100 /  4.  6.100
+
+  libswresample   2.  7.100 /  2.  7.100
+
+  libpostproc    54.  5.100 / 54.  5.100
+
+Guessed Channel Layout for Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, stereo, s16, 128 kb/s
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf57.71.100
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc57.89.100 pcm_s16le
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 0.012
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 2.06
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 5.644
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 9.228
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 20.236
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 28.172
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 30.988
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 31.756
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 32.524
+
+[silencedetect @ 0x562dc3e189a0] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0x562dc3e189a0] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A speed=7.13e+03x    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+
+  libavutil      54. 31.100 / 54. 31.100
+
+  libavcodec     56. 60.100 / 56. 60.100
+
+  libavformat    56. 40.101 / 56. 40.101
+
+  libavdevice    56.  4.100 / 56.  4.100
+
+  libavfilter     5. 40.101 /  5. 40.101
+
+  libavresample   2.  1.  0 /  2.  1.  0
+
+  libswscale      3.  1.101 /  3.  1.101
+
+  libswresample   1.  2.101 /  1.  2.101
+
+  libpostproc    53.  3.100 / 53.  3.100
+
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf56.40.101
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc56.60.100 pcm_s16le
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+[silencedetect @ 0x824880] silence_start: 0.012
+
+[silencedetect @ 0x824880] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0x824880] silence_start: 2.06
+
+[silencedetect @ 0x824880] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0x824880] silence_start: 5.644
+
+[silencedetect @ 0x824880] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0x824880] silence_start: 9.228
+
+[silencedetect @ 0x824880] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0x824880] silence_start: 20.236
+
+[silencedetect @ 0x824880] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0x824880] silence_start: 28.172
+
+[silencedetect @ 0x824880] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0x824880] silence_start: 30.988
+
+[silencedetect @ 0x824880] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0x824880] silence_start: 31.756
+
+[silencedetect @ 0x824880] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0x824880] silence_start: 32.524
+
+[silencedetect @ 0x824880] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0x824880] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+
+  libavutil      54. 31.100 / 54. 31.100
+
+  libavcodec     56. 60.100 / 56. 60.100
+
+  libavformat    56. 40.101 / 56. 40.101
+
+  libavdevice    56.  4.100 / 56.  4.100
+
+  libavfilter     5. 40.101 /  5. 40.101
+
+  libavresample   2.  1.  0 /  2.  1.  0
+
+  libswscale      3.  1.101 /  3.  1.101
+
+  libswresample   1.  2.101 /  1.  2.101
+
+  libpostproc    53.  3.100 / 53.  3.100
+
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf56.40.101
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc56.60.100 pcm_s16le
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+[silencedetect @ 0xefa880] silence_start: 0.012
+
+[silencedetect @ 0xefa880] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0xefa880] silence_start: 2.06
+
+[silencedetect @ 0xefa880] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0xefa880] silence_start: 5.644
+
+[silencedetect @ 0xefa880] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0xefa880] silence_start: 9.228
+
+[silencedetect @ 0xefa880] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0xefa880] silence_start: 20.236
+
+[silencedetect @ 0xefa880] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0xefa880] silence_start: 28.172
+
+[silencedetect @ 0xefa880] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0xefa880] silence_start: 30.988
+
+[silencedetect @ 0xefa880] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0xefa880] silence_start: 31.756
+
+[silencedetect @ 0xefa880] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0xefa880] silence_start: 32.524
+
+[silencedetect @ 0xefa880] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0xefa880] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+
+  libavutil      54. 31.100 / 54. 31.100
+
+  libavcodec     56. 60.100 / 56. 60.100
+
+  libavformat    56. 40.101 / 56. 40.101
+
+  libavdevice    56.  4.100 / 56.  4.100
+
+  libavfilter     5. 40.101 /  5. 40.101
+
+  libavresample   2.  1.  0 /  2.  1.  0
+
+  libswscale      3.  1.101 /  3.  1.101
+
+  libswresample   1.  2.101 /  1.  2.101
+
+  libpostproc    53.  3.100 / 53.  3.100
+
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf56.40.101
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc56.60.100 pcm_s16le
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+[silencedetect @ 0x2450880] silence_start: 0.012
+
+[silencedetect @ 0x2450880] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0x2450880] silence_start: 2.06
+
+[silencedetect @ 0x2450880] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0x2450880] silence_start: 5.644
+
+[silencedetect @ 0x2450880] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0x2450880] silence_start: 9.228
+
+[silencedetect @ 0x2450880] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0x2450880] silence_start: 20.236
+
+[silencedetect @ 0x2450880] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0x2450880] silence_start: 28.172
+
+[silencedetect @ 0x2450880] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0x2450880] silence_start: 30.988
+
+[silencedetect @ 0x2450880] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0x2450880] silence_start: 31.756
+
+[silencedetect @ 0x2450880] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0x2450880] silence_start: 32.524
+
+[silencedetect @ 0x2450880] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0x2450880] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+
+  libavutil      54. 31.100 / 54. 31.100
+
+  libavcodec     56. 60.100 / 56. 60.100
+
+  libavformat    56. 40.101 / 56. 40.101
+
+  libavdevice    56.  4.100 / 56.  4.100
+
+  libavfilter     5. 40.101 /  5. 40.101
+
+  libavresample   2.  1.  0 /  2.  1.  0
+
+  libswscale      3.  1.101 /  3.  1.101
+
+  libswresample   1.  2.101 /  1.  2.101
+
+  libpostproc    53.  3.100 / 53.  3.100
+
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+
+Input #0, wav, from 'audio/4.wav':
+
+  Duration: 00:00:37.40, bitrate: 128 kb/s
+
+    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+
+Output #0, null, to 'pipe:':
+
+  Metadata:
+
+    encoder         : Lavf56.40.101
+
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+
+    Metadata:
+
+      encoder         : Lavc56.60.100 pcm_s16le
+
+Stream mapping:
+
+  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+
+Press [q] to stop, [?] for help
+
+[silencedetect @ 0x21e7880] silence_start: 0.012
+
+[silencedetect @ 0x21e7880] silence_end: 1.536 | silence_duration: 1.524
+
+[silencedetect @ 0x21e7880] silence_start: 2.06
+
+[silencedetect @ 0x21e7880] silence_end: 2.816 | silence_duration: 0.756
+
+[silencedetect @ 0x21e7880] silence_start: 5.644
+
+[silencedetect @ 0x21e7880] silence_end: 6.4 | silence_duration: 0.756
+
+[silencedetect @ 0x21e7880] silence_start: 9.228
+
+[silencedetect @ 0x21e7880] silence_end: 9.984 | silence_duration: 0.756
+
+[silencedetect @ 0x21e7880] silence_start: 20.236
+
+[silencedetect @ 0x21e7880] silence_end: 21.504 | silence_duration: 1.268
+
+[silencedetect @ 0x21e7880] silence_start: 28.172
+
+[silencedetect @ 0x21e7880] silence_end: 28.928 | silence_duration: 0.756
+
+[silencedetect @ 0x21e7880] silence_start: 30.988
+
+[silencedetect @ 0x21e7880] silence_end: 31.744 | silence_duration: 0.756
+
+[silencedetect @ 0x21e7880] silence_start: 31.756
+
+[silencedetect @ 0x21e7880] silence_end: 32.256 | silence_duration: 0.5
+
+[silencedetect @ 0x21e7880] silence_start: 32.524
+
+[silencedetect @ 0x21e7880] silence_end: 35.328 | silence_duration: 2.804
+
+[silencedetect @ 0x21e7880] silence_start: 36.62
+
+size=N/A time=00:00:37.40 bitrate=N/A    
+
+video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
