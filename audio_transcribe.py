@@ -16,6 +16,7 @@ from pydub.silence import split_on_silence
 import shutil
 from shutil import rmtree
 import os
+import silence_detection
 
 UnseparatedWavFilesPath = "audio2"
 

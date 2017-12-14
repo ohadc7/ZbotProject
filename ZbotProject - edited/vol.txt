@@ -10,37 +10,36 @@ ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg develo
   libswscale      3.  1.101 /  3.  1.101
   libswresample   1.  2.101 /  1.  2.101
   libpostproc    53.  3.100 / 53.  3.100
-Guessed Channel Layout for  Input Stream #0.0 : stereo
-Input #0, wav, from 'audio/4.wav':
-  Duration: 00:00:37.40, bitrate: 128 kb/s
-    Stream #0:0: Audio: pcm_alaw ([6][0][0][0] / 0x0006), 8000 Hz, 2 channels, s16, 128 kb/s
+Input #0, flac, from 'temp_dir/4_right_chunk.flac':
+  Metadata:
+    ENCODER         : Lavf56.40.101
+  Duration: 00:00:37.40, start: 0.000000, bitrate: 50 kb/s
+    Stream #0:0: Audio: flac, 8000 Hz, mono, s16
 Output #0, null, to 'pipe:':
   Metadata:
     encoder         : Lavf56.40.101
-    Stream #0:0: Audio: pcm_s16le, 8000 Hz, stereo, s16, 256 kb/s
+    Stream #0:0: Audio: pcm_s16le, 8000 Hz, mono, s16, 128 kb/s
     Metadata:
       encoder         : Lavc56.60.100 pcm_s16le
 Stream mapping:
-  Stream #0:0 -> #0:0 (pcm_alaw (native) -> pcm_s16le (native))
+  Stream #0:0 -> #0:0 (flac (native) -> pcm_s16le (native))
 Press [q] to stop, [?] for help
-[silencedetect @ 0x262e880] silence_start: 0.012
-[silencedetect @ 0x262e880] silence_end: 1.536 | silence_duration: 1.524
-[silencedetect @ 0x262e880] silence_start: 2.06
-[silencedetect @ 0x262e880] silence_end: 2.816 | silence_duration: 0.756
-[silencedetect @ 0x262e880] silence_start: 5.644
-[silencedetect @ 0x262e880] silence_end: 6.4 | silence_duration: 0.756
-[silencedetect @ 0x262e880] silence_start: 9.228
-[silencedetect @ 0x262e880] silence_end: 9.984 | silence_duration: 0.756
-[silencedetect @ 0x262e880] silence_start: 20.236
-[silencedetect @ 0x262e880] silence_end: 21.504 | silence_duration: 1.268
-[silencedetect @ 0x262e880] silence_start: 28.172
-[silencedetect @ 0x262e880] silence_end: 28.928 | silence_duration: 0.756
-[silencedetect @ 0x262e880] silence_start: 30.988
-[silencedetect @ 0x262e880] silence_end: 31.744 | silence_duration: 0.756
-[silencedetect @ 0x262e880] silence_start: 31.756
-[silencedetect @ 0x262e880] silence_end: 32.256 | silence_duration: 0.5
-[silencedetect @ 0x262e880] silence_start: 32.524
-[silencedetect @ 0x262e880] silence_end: 35.328 | silence_duration: 2.804
-[silencedetect @ 0x262e880] silence_start: 36.62
+[silencedetect @ 0x8343c0] silence_start: -0.068
+[silencedetect @ 0x8343c0] silence_end: 5.112 | silence_duration: 5.18
+[silencedetect @ 0x8343c0] silence_start: 5.188
+[silencedetect @ 0x8343c0] silence_end: 6.552 | silence_duration: 1.364
+[silencedetect @ 0x8343c0] silence_start: 8.14
+[silencedetect @ 0x8343c0] silence_end: 10.008 | silence_duration: 1.868
+[silencedetect @ 0x8343c0] silence_start: 11.74
+[silencedetect @ 0x8343c0] silence_end: 12.384 | silence_duration: 0.644
+[silencedetect @ 0x8343c0] silence_start: 17.716
+[silencedetect @ 0x8343c0] silence_end: 21.6 | silence_duration: 3.884
+[silencedetect @ 0x8343c0] silence_start: 22.54
+[silencedetect @ 0x8343c0] silence_end: 27.288 | silence_duration: 4.748
+[silencedetect @ 0x8343c0] silence_start: 27.292
+[silencedetect @ 0x8343c0] silence_end: 29.16 | silence_duration: 1.868
+[silencedetect @ 0x8343c0] silence_start: 31.108
+[silencedetect @ 0x8343c0] silence_end: 36.576 | silence_duration: 5.468
+[silencedetect @ 0x8343c0] silence_start: 36.652
 size=N/A time=00:00:37.40 bitrate=N/A    
-video:0kB audio:1169kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+video:0kB audio:584kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
