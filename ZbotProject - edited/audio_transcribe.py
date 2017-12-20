@@ -16,7 +16,7 @@ from pydub.silence import split_on_silence
 import shutil
 from shutil import rmtree
 import os
-from silence_detection import silence_times
+from silence_detection import talking_times
 
 UnseparatedWavFilesPath = "audio"
 
@@ -30,7 +30,7 @@ def omit_extension(fileName, expectedExtension):
     extensionLength = len(expectedExtension)
     extension = file[-extensionLength:]
     if (extension != expectedExtension):
-        raise 'The file ' + fileName + 'doesn\'t have ' + expectedExtension + ' extension.'
+        raise NameError('The file ' + fileName + 'doesn\'t have ' + expectedExtension + ' extension.')
     filePathWithoutExtension = file[:-extensionLength]
     return filePathWithoutExtension
 
@@ -39,7 +39,7 @@ shutil.rmtree("temp_dir", True)
 os.mkdir("temp_dir")
 
 if(os.path.isdir(UnseparatedWavFilesPath) is not True):
-    raise 'The directory ' + UnseparatedWavFilesPath + ' wasn\'t found. Please create this directory in the current location and put wav files in it.'
+    raise NameError('The directory ' + UnseparatedWavFilesPath + ' wasn\'t found. Please create this directory in the current location and put wav files in it.')
 
 wavFilesList = os.listdir(UnseparatedWavFilesPath)
 for file in wavFilesList:
@@ -55,44 +55,87 @@ for file in wavFilesList:
     leftFlacFile = invert_wav_to_flac(LeftChannelFile, leftFlacFileName)
     rightFlacFile = invert_wav_to_flac(RightChannelFile, rightFlacFileName)
 
-    left_times = silence_times(leftFlacFile)
-    right_times = silence_times(rightFlacFile)
+    left_times = talking_times(leftFlacFile)
+    right_times = talking_times(rightFlacFile)
 
     talking_time_left = {}
     talking_time_right = {}
 
-    first_silence_left = left_times.pop(0)
-    first_silence_right = right_times.pop(0)
+    first_talk_left = left_times.pop(0)
+    first_talk_right = right_times.pop(0)
+    counter = 0
     while(left_times != [] and right_times != []):
-        if(first_silence_left < first_silence_right):
-            print("left: ")
-            print(first_silence_left)
-
-            first_silence_left = left_times.pop(0)
+        if(first_talk_left < first_talk_right):
+            # print("left: ")
+            # print(first_talk_left)
+            # print('ffmpeg -ss ' + str(first_talk_left[0] - 0.15) + ' -t ' +
+            #           str(first_talk_left[1] - first_talk_left[0] + 0.15) +
+            #           ' -i ' + leftFlacFileName + ' temp_dir/segment' + str(counter) + '_left.flac')
+            os.system('ffmpeg -ss ' + str(first_talk_left[0] - 0.15) + ' -t ' +
+                      str(first_talk_left[1] - first_talk_left[0] + 0.15) +
+                      ' -i ' + leftFlacFileName + ' temp_dir/segment' + str(counter) + '_left.flac')
+            counter = counter + 1
+            if(left_times != []):
+                first_talk_left = left_times.pop(0)
 
         else:
-            print("right: ")
-            print(first_silence_right)
-            first_silence_right = right_times.pop(0)
+            # print("right: ")
+            # print(first_talk_right)
+            # print('ffmpeg -ss ' + str(first_talk_right[0] - 0.15) + ' -t ' +
+            #           str(first_talk_right[1] - first_talk_right[0] + 0.15) +
+            #           ' -i ' + rightFlacFileName + ' temp_dir/segment' + str(counter) + '_right.flac')
+            os.system('ffmpeg -ss ' + str(first_talk_right[0] - 0.15) + ' -t ' +
+                      str(first_talk_right[1] - first_talk_right[0] + 0.15) +
+                      ' -i ' + rightFlacFileName + ' temp_dir/segment' + str(counter) + '_right.flac')
+            counter = counter + 1
+            if (right_times != []):
+                first_talk_right = right_times.pop(0)
 
-    if (first_silence_left < first_silence_right):
-        print("left: ")
-        print(first_silence_left)
-        print("right: ")
-        print(first_silence_right)
+    if (first_talk_left < first_talk_right):
+        # print("left: ")
+        # print(first_talk_left)
+        os.system('ffmpeg -ss ' + str(first_talk_left[0] - 0.15) + ' -t ' +
+                  str(first_talk_left[1] - first_talk_left[0] + 0.15) +
+                  ' -i ' + leftFlacFileName + ' temp_dir/segment' + str(counter) + '_left.flac')
+        counter = counter + 1
+        # print("right: ")
+        # print(first_talk_right)
+        os.system('ffmpeg -ss ' + str(first_talk_right[0] - 0.15) + ' -t ' +
+                  str(first_talk_right[1] - first_talk_right[0] + 0.15) +
+                  ' -i ' + rightFlacFileName + ' temp_dir/segment' + str(counter) + '_right.flac')
+        counter = counter + 1
     else:
-        print("right: ")
-        print(first_silence_right)
-        print("left: ")
-        print(first_silence_left)
+        # print("right: ")
+        # print(first_talk_right)
+        os.system('ffmpeg -ss ' + str(first_talk_right[0] - 0.15) + ' -t ' +
+                  str(first_talk_right[1] - first_talk_right[0] + 0.15) +
+                  ' -i ' + rightFlacFileName + ' temp_dir/segment' + str(counter) + '_right.flac')
+        counter = counter + 1
+        # print("left: ")
+        # print(first_talk_left)
+        os.system('ffmpeg -ss ' + str(first_talk_left[0] - 0.15) + ' -t ' +
+                  str(first_talk_left[1] - first_talk_left[0] + 0.15) +
+                  ' -i ' + leftFlacFileName + ' temp_dir/segment' + str(counter) + '_left.flac')
+        counter = counter + 1
+
+    while(left_times != []):
+        first_talk_left = left_times.pop(0)
+        os.system('ffmpeg -ss ' + str(first_talk_left[0] - 0.15) + ' -t ' +
+                  str(first_talk_left[1] - first_talk_left[0] + 0.15) +
+                  ' -i ' + leftFlacFileName + ' temp_dir/segment' + str(counter) + '_left.flac')
+        counter = counter + 1
+
+    while(right_times != []):
+        first_talk_right = right_times.pop(0)
+        os.system('ffmpeg -ss ' + str(first_talk_right[0] - 0.15) + ' -t ' +
+                  str(first_talk_right[1] - first_talk_right[0] + 0.15) +
+                  ' -i ' + rightFlacFileName + ' temp_dir/segment' + str(counter) + '_right.flac')
+        counter = counter + 1
 
 
-    #os.system('ffmpeg -ss <silence_end - 0.25> -t <next_silence_start - silence_end + 0.25> -i input.mov word-N.mov')
 
-
-
-
-            # use the audio file as the audio source
+'''
+    # use the audio file as the audio source
     # read the entire audio file
 
     # recognize speech using Google Speech Recognition
@@ -169,5 +212,5 @@ for i, chunk in enumerate(audio_chunks):
         print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
-
+'''
 
