@@ -24,22 +24,22 @@ Output #0, null, to 'pipe:':
 Stream mapping:
   Stream #0:0 -> #0:0 (flac (native) -> pcm_s16le (native))
 Press [q] to stop, [?] for help
-[silencedetect @ 0x1c043c0] silence_start: -0.068
-[silencedetect @ 0x1c043c0] silence_end: 5.112 | silence_duration: 5.18
-[silencedetect @ 0x1c043c0] silence_start: 5.188
-[silencedetect @ 0x1c043c0] silence_end: 6.552 | silence_duration: 1.364
-[silencedetect @ 0x1c043c0] silence_start: 8.14
-[silencedetect @ 0x1c043c0] silence_end: 10.008 | silence_duration: 1.868
-[silencedetect @ 0x1c043c0] silence_start: 11.74
-[silencedetect @ 0x1c043c0] silence_end: 12.384 | silence_duration: 0.644
-[silencedetect @ 0x1c043c0] silence_start: 17.716
-[silencedetect @ 0x1c043c0] silence_end: 21.6 | silence_duration: 3.884
-[silencedetect @ 0x1c043c0] silence_start: 22.54
-[silencedetect @ 0x1c043c0] silence_end: 27.288 | silence_duration: 4.748
-[silencedetect @ 0x1c043c0] silence_start: 27.292
-[silencedetect @ 0x1c043c0] silence_end: 29.16 | silence_duration: 1.868
-[silencedetect @ 0x1c043c0] silence_start: 31.108
-[silencedetect @ 0x1c043c0] silence_end: 36.576 | silence_duration: 5.468
-[silencedetect @ 0x1c043c0] silence_start: 36.652
+[silencedetect @ 0x1b433c0] silence_start: -0.068
+[silencedetect @ 0x1b433c0] silence_end: 5.112 | silence_duration: 5.18
+[silencedetect @ 0x1b433c0] silence_start: 5.188
+[silencedetect @ 0x1b433c0] silence_end: 6.552 | silence_duration: 1.364
+[silencedetect @ 0x1b433c0] silence_start: 8.14
+[silencedetect @ 0x1b433c0] silence_end: 10.008 | silence_duration: 1.868
+[silencedetect @ 0x1b433c0] silence_start: 11.74
+[silencedetect @ 0x1b433c0] silence_end: 12.384 | silence_duration: 0.644
+[silencedetect @ 0x1b433c0] silence_start: 17.716
+[silencedetect @ 0x1b433c0] silence_end: 21.6 | silence_duration: 3.884
+[silencedetect @ 0x1b433c0] silence_start: 22.54
+[silencedetect @ 0x1b433c0] silence_end: 27.288 | silence_duration: 4.748
+[silencedetect @ 0x1b433c0] silence_start: 27.292
+[silencedetect @ 0x1b433c0] silence_end: 29.16 | silence_duration: 1.868
+[silencedetect @ 0x1b433c0] silence_start: 31.108
+[silencedetect @ 0x1b433c0] silence_end: 36.576 | silence_duration: 5.468
+[silencedetect @ 0x1b433c0] silence_start: 36.652
 size=N/A time=00:00:37.40 bitrate=N/A    
 video:0kB audio:584kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
